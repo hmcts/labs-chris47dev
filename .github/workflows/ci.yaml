@@ -18,6 +18,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
+    - name: Build debug
+      run: ./gradlew pmdIntegrationTest --warning-mode all
     - name: Build
       run: ./gradlew check
     - name: Dependency check
