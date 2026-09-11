@@ -19,7 +19,10 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Build debug
-      run: ./gradlew pmdIntegrationTest --warning-mode all
+      run: |
+        ./gradlew pmdIntegrationTest --warning-mode all
+        cat build/reports/pmd/integrationTest.html
+        cat build/reports/problems/problems-report.html
     - name: Build
       run: ./gradlew check
     - name: Dependency check
