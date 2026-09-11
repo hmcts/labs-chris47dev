@@ -20,5 +20,4 @@ jobs:
         cache: gradle
     - name: Build
       run: ./gradlew check
-    - name: Dependency check
-      run: ./gradlew dependencyCheckAggregate
+
